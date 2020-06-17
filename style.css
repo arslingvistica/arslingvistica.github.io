@@ -8801,10 +8801,11 @@ p, #shot .title::before {
 
 a {
   color: #f5d546;
+    text-decoration: none;
 }
 a:hover {
-  background: #f5d546;
-  color: #111;
+  background: transparent;
+  color: #f5d546;
   text-decoration: none;
 }
 

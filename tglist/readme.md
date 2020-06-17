@@ -24,7 +24,7 @@ Various groups ranging from college and universities to non-profit organisations
 The plan is to update it twice a month.
 
 ### Can I propose groups to be added?
-Yup, [here.](https://github.com/TranslatingCode/translatingcode.github.io/issues/4)
+Yup, in issues.
 
 ### Hmmm, this code could look better.
 I am well aware of that, will take care of that in the future.
