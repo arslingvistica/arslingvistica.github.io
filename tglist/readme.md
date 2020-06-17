@@ -6,7 +6,7 @@
 Just as the title says, this is a curated list of Facebook Groups and Pages for Translators, Interpreters and Other Language-Lovers. 
 
 ### Where?
-[Here.](https://translatingcode.github.io/tglist/decider.html)
+[Here.](https://arslingvistica.github.io/tglist/decider.html)
 
 ### Why?
 Because it might help other people that were, just like me, searching for a certain group that is sharing their interests. 
