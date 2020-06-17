@@ -1,0 +1,47 @@
+pre.box {
+  padding: 1.5em 2em;
+}
+
+pre.box--manual,
+pre.box--automatic {
+  background-repeat: no-repeat;
+  background-size: 32px;
+}
+
+pre.box--manual {
+  background-position: top 1.5em right 2em;
+}
+
+pre.box--automatic {
+  background-position: top right;
+  background-origin: content-box;
+}
+
+/*Demo styles*/
+pre.box {
+  border: 4px solid #ccc;
+  border-radius: 0.15em;
+  margin: 1em auto;
+}
+
+body {
+  font: 80% / 1.45 sans-serif;
+  padding: 1em;
+}
+
+h1 {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+pre > code {
+  display: block;
+}
+
+pre.box--manual {
+  border-color: tomato;
+}
+
+pre.box--automatic {
+  border-color: forestgreen;
+}

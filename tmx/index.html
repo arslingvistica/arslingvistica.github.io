@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A simple overview of a TMX file structure</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://prismjs.com/themes/prism.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <h1>A simple overview of a TMX file structure</h1>
+
+<pre class="language-css box"><code>&lt;?xml version="1.0"?&gt;/*XML version.*/
+&lt;!-- Example of TMX document --&gt;/*XML comment.*/
+
+</code></pre>
+
+<pre class="language-css box"><code>&lt tmx version="1.4" &gt /*The version attribute indicates the version of the TMX format.*/
+
+</code></pre>
+
+
+<pre class="language-css box"><code>
+&lt header/*Begining of the header tag which contains meta-data about the document.*/
+/*Attributes declared inside the start tag.*/
+  creationtool="XYZTool"/*Name of the tool which created this TMX.*/
+  creationtoolversion="1.01-023"/*Version of the above mentioned tool.*/
+  datatype="PlainText"/*Type of contained data.*/
+  segtype="sentence"/*Specifies the kind of segmentation used in the &lttu&gt element. */
+  adminlang="en-us"/*Specifies the default language for the administrative and informative elements &ltnote&gt and &ltprop&gt.*/
+  srclang="EN"/*Specifies the source language.*/
+  o-tmf="ABCTransMem"/*Specifies the format of the translation memory file from which the TMX document or segment thereof have been generated.*/
+  creationdate="20020101T163812Z"/*Creation date having the following format YYYYMMDDThhmmssZ.*/
+  creationid="John Doe"/*Specifies the user that created the entry.*/
+  changedate="20020413T023401Z"/*Change date having the following format YYYYMMDDThhmmssZ.*/
+  changeid="Jane Doe"/*Specifies the user that modified the entry.*/
+  o-encoding="iso-8859-1"/*The o-encoding attribute specifies the original or preferred code set of the data of the element in case it is to be re-encoded in a non-Unicode code set.*/
+  /*Inside of the start tag.*/
+ &gt /*Start tag closed.*/
+ </code></pre>
+
+
+<pre class="language-css box"><code>
+/*Inside the header element.*/
+ &ltnote&gt This is a note at document level. &lt/note&gt/*Self-explanatory.*/
+ &ltprop type="RTFPreamble" {\rtf1\ansi\tag etc} {/fonttbl} &lt/prop&gt/*Define custom properties of the parent element.*/
+  &ltude name="MacRoman" base="Macintosh" &gt/*Specify a set of user-defined characters.*/
+   &ltmap unicode="#xF8FF" code="#xF0" ent="Apple_logo" subst="[Apple]"/&gt/*Mapping from Unicode to the user-defined encoding.*/
+ &lt/ude&gt/*ude tag closed.*/
+ &lt/header&gt/*header element tag closed.*/
+/*Ouside of the header element.*/
+</code></pre>
+
+<pre class="language-css box"><code>
+ &ltbody&gt/*Container for the translation unit collection.*/
+    &lttu /*Translation unit start.*/
+		tuid="0001" /*Translation unit id.*/
+		datatype="Text" /*Type of data contained inthe translation unit.*/
+		usagecount="2" /*Time the unit was accessed.*/
+		lastusagedate="20181129T122945Z" /*Last time the unit was accessed.*/
+	&gt/*tu start tag closed.*/
+		&ltnote&gtText of a note at the TU level.&lt/note&gt /*Self-explanatory.*/
+		&ltprop type="x-Domain">Christmas&lt/prop&gt /*Custom property tags.*/
+		&ltprop type="x-Project">Santa&lt/prop&gt /*Custom property tags.*/
+			&lttuv /*Contains text in a given language.*/
+				xml:lang="ro" /*Language for the curent text.*/
+				creationdate="20181129T122945Z" /*Date it was created.*/
+				creationid="John Doe" /*User who created it.*/
+				&gt /*tuv start tag closed.*/
+				&ltseg&gtdata Propozitia ta aici.&lt/seg&gt /*The text data.*/
+			&lt/tuv&gt /*tuv closing tag*/
+			&lttuv /*Contains text in a given language.*/
+				xml:lang="en" /*Language for the curent text.*/
+				creationdate="20181129T122945Z" /*Date it was created.*/
+				creationid="John Doe" /*User who created it.*/
+				changedate="20181129T122945Z" /*Date it was modified.*/
+				changeid="Jane Doe" /*User who modified it.*/
+			&gt /*tuv start tag closed.*/
+				&ltseg&gtYour sentence here.&lt/seg&gt /*The text data.*/
+			&lt/tuv&gt /*tuv closing tag*/
+		&lt/tu&gt /*tu closing tag*/
+ &lt/body&gt /*body closing tag*/
+
+ </code> </pre>
+ <pre class="language-css box"><code>&lt/tmx&gt /*tmx closing tag*/</code></pre>
+   <script src='https://prismjs.com/prism.js'> </script>
+
+  
+
+ </body>
+ Source - <i>Translation Memory eXchange format (TMX) definition document</i> by the Localisation Industry Standards Association (LISA) available under the terms of the <a href="https://creativecommons.org/licenses/by/3.0/" target=_blank">CC BT 3.0 license.</a>
+</html>
